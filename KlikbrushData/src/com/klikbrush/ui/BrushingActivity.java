@@ -1,12 +1,11 @@
 package com.klikbrush.ui;
 
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v4.app.FragmentActivity;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.edmodo.rangebar.RangeBar;
+
 import com.example.klikbrushdata.R;
 
 public class BrushingActivity extends FragmentActivity {
@@ -14,7 +13,7 @@ public class BrushingActivity extends FragmentActivity {
 	TextView txtCounter, txtFrequency, txtStroke;
 	ProgressBar prgPhase;
     int passedSenconds = 0;
-    RangeBar rangeFrequency;
+
 
 	
 	@Override
@@ -54,10 +53,7 @@ public class BrushingActivity extends FragmentActivity {
 		prgPhase = (ProgressBar) findViewById(R.id.progress_phase);
 		prgPhase.setMax(30);
 		prgPhase.setProgress(0);
-		rangeFrequency =  (RangeBar) findViewById(R.id.rangebar_frequency);
-		rangeFrequency.setTickCount(9);
-		rangeFrequency.setTickHeight(25.0f);
-		rangeFrequency.setThumbIndices(4, 4);
+
 	}
 	
 	private void updateUICounter(){    
