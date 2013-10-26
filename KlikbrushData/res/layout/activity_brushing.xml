@@ -62,36 +62,32 @@
         android:id="@id/ll_stats"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp">
         
     <TextView
             android:id="@+id/txt_frequency"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:textAlignment="center"
             android:text="Bild1"/>
         
 	<SeekBar
-	    android:paddingTop="20dip"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:gravity="center"
-		android:layout_gravity="center"
-		android:max="19"
-		android:progress="0"
- 		android:secondaryProgress="0"
-		android:id="@+id/slider"
-		android:layout_toRightOf="@+id/txt_frequency"/>
-	
+	    android:id="@+id/slider"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@+id/txt_strokelength"
+	    android:layout_toRightOf="@id/txt_frequency"
+	    android:max="100"
+	    android:progress="0" />
 
         <TextView
             android:id="@+id/txt_strokelength"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:textAlignment="center"
             android:text="Bild2"/>
+        
     </RelativeLayout>
 
 </RelativeLayout>
