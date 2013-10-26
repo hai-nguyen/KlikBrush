@@ -11,7 +11,6 @@ public class BrushingActivity extends FragmentActivity {
 	
 	TextView txtCounter, txtFrequency, txtStroke;
     int passedSenconds = 0;
-	
 
 	
 	@Override
@@ -31,7 +30,7 @@ public class BrushingActivity extends FragmentActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                updateTextView();
+                            	updateTxtCounter();
                             }
                         });
                     }
@@ -50,7 +49,7 @@ public class BrushingActivity extends FragmentActivity {
 		txtStroke = (TextView) findViewById(R.id.txt_strokelength);
 	}
 	
-	private void updateTextView(){    
+	private void updateTxtCounter(){    
 	    passedSenconds++;
 	    int seconds = passedSenconds % 60;
         int minutes = (passedSenconds / 60) % 60;
