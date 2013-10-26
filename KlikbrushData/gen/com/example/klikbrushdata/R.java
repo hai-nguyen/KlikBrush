@@ -9,86 +9,6 @@ package com.example.klikbrushdata;
 
 public final class R {
     public static final class attr {
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int barColor=0x7f010003;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int barWeight=0x7f010002;
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int connectingLineColor=0x7f010005;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int connectingLineWeight=0x7f010004;
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int thumbColorNormal=0x7f010009;
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int thumbColorPressed=0x7f01000a;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int thumbImageNormal=0x7f010007;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int thumbImagePressed=0x7f010008;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int thumbRadius=0x7f010006;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int tickCount=0x7f010000;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int tickHeight=0x7f010001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -97,15 +17,11 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f060000;
-        public static final int activity_vertical_margin=0x7f060001;
+        public static final int activity_horizontal_margin=0x7f040000;
+        public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int rabbit=0x7f020001;
-        public static final int seek_thumb_normal=0x7f020002;
-        public static final int seek_thumb_pressed=0x7f020003;
-        public static final int tourtle=0x7f020004;
     }
     public static final class id {
         public static final int action_settings=0x7f08000a;
@@ -115,9 +31,9 @@ containing a value of this type.
         public static final int ll_stats=0x7f080003;
         public static final int ll_teeth_parent=0x7f080008;
         public static final int progress_phase=0x7f080001;
-        public static final int rangebar_frequency=0x7f080004;
+        public static final int slider=0x7f080005;
         public static final int txt_counter=0x7f080000;
-        public static final int txt_frequency=0x7f080005;
+        public static final int txt_frequency=0x7f080004;
         public static final int txt_strokelength=0x7f080006;
     }
     public static final class layout {
@@ -129,9 +45,9 @@ containing a value of this type.
         public static final int main=0x7f070000;
     }
     public static final class string {
-        public static final int action_settings=0x7f040001;
-        public static final int app_name=0x7f040000;
-        public static final int hello_world=0x7f040002;
+        public static final int action_settings=0x7f050001;
+        public static final int app_name=0x7f050000;
+        public static final int hello_world=0x7f050002;
     }
     public static final class style {
         /** 
@@ -154,216 +70,11 @@ containing a value of this type.
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f060001;
     }
-    public static final class styleable {
-        /** Attributes that can be used with a RangeBar.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #RangeBar_barColor com.example.klikbrushdata:barColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_barWeight com.example.klikbrushdata:barWeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_connectingLineColor com.example.klikbrushdata:connectingLineColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_connectingLineWeight com.example.klikbrushdata:connectingLineWeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_thumbColorNormal com.example.klikbrushdata:thumbColorNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_thumbColorPressed com.example.klikbrushdata:thumbColorPressed}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_thumbImageNormal com.example.klikbrushdata:thumbImageNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_thumbImagePressed com.example.klikbrushdata:thumbImagePressed}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_thumbRadius com.example.klikbrushdata:thumbRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_tickCount com.example.klikbrushdata:tickCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #RangeBar_tickHeight com.example.klikbrushdata:tickHeight}</code></td><td></td></tr>
-           </table>
-           @see #RangeBar_barColor
-           @see #RangeBar_barWeight
-           @see #RangeBar_connectingLineColor
-           @see #RangeBar_connectingLineWeight
-           @see #RangeBar_thumbColorNormal
-           @see #RangeBar_thumbColorPressed
-           @see #RangeBar_thumbImageNormal
-           @see #RangeBar_thumbImagePressed
-           @see #RangeBar_thumbRadius
-           @see #RangeBar_tickCount
-           @see #RangeBar_tickHeight
-         */
-        public static final int[] RangeBar = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#barColor}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.klikbrushdata:barColor
-        */
-        public static final int RangeBar_barColor = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#barWeight}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.klikbrushdata:barWeight
-        */
-        public static final int RangeBar_barWeight = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#connectingLineColor}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.klikbrushdata:connectingLineColor
-        */
-        public static final int RangeBar_connectingLineColor = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#connectingLineWeight}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.klikbrushdata:connectingLineWeight
-        */
-        public static final int RangeBar_connectingLineWeight = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#thumbColorNormal}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.klikbrushdata:thumbColorNormal
-        */
-        public static final int RangeBar_thumbColorNormal = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#thumbColorPressed}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.example.klikbrushdata:thumbColorPressed
-        */
-        public static final int RangeBar_thumbColorPressed = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#thumbImageNormal}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.klikbrushdata:thumbImageNormal
-        */
-        public static final int RangeBar_thumbImageNormal = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#thumbImagePressed}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.klikbrushdata:thumbImagePressed
-        */
-        public static final int RangeBar_thumbImagePressed = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#thumbRadius}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.klikbrushdata:thumbRadius
-        */
-        public static final int RangeBar_thumbRadius = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#tickCount}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.klikbrushdata:tickCount
-        */
-        public static final int RangeBar_tickCount = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.klikbrushdata.R.attr#tickHeight}
-          attribute's value can be found in the {@link #RangeBar} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.klikbrushdata:tickHeight
-        */
-        public static final int RangeBar_tickHeight = 1;
-    };
 }
