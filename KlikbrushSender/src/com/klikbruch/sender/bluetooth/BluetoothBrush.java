@@ -378,16 +378,16 @@ public class BluetoothBrush extends Activity {
 				new FFT(sampleSize).fft(realNumbersY, imagNumbersY);
 				new FFT(sampleSize).fft(realNumbersZ, imagNumbersZ);
 				
-				int maxIndex = Util.computeMaxIndex(realNumbersX, imagNumbersX);
-				double samplingPeriod = ((timestamps[sampleSize-1]- timestamps[0])/1000000000d)/sampleSize;
-				double output_frequency = ((maxIndex/samplingPeriod)/sampleSize);
+				double output_frequency_x = Util.getFrequency(realNumbersX, imagNumbersX, timestamps, sampleSize);
+				double output_frequency_y = Util.getFrequency(realNumbersY, imagNumbersY, timestamps, sampleSize);
+				double output_frequency_z = Util.getFrequency(realNumbersZ, imagNumbersZ, timestamps, sampleSize);
 				
 				// Util.addDoublesToFiles(realNumbersX, imagNumbersX,
 				// realNumbersY,
 				// imagNumbersY, realNumbersZ, imagNumbersZ, output,
 				// timestamps);
 
-				sendMessage(output_state+","+output_frequency+",0,0");
+				sendMessage(output_state+","+output_frequency_x+","+output_frequency_y+","+output_frequency_z);
 
 				count = 0;
 			}

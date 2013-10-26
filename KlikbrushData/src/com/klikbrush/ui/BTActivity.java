@@ -10,7 +10,6 @@ import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.klikbrush.bluetooth.BluetoothChatService;
 
@@ -53,8 +52,8 @@ public class BTActivity extends FragmentActivity {
 		
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 		if (mBluetoothAdapter == null) {
-			Toast.makeText(this, "Bluetooth is not available",
-					Toast.LENGTH_LONG).show();
+//			Toast.makeText(this, "Bluetooth is not available",
+//					Toast.LENGTH_LONG).show();
 			finish();
 			return;
 		}
@@ -131,14 +130,14 @@ public class BTActivity extends FragmentActivity {
 			case MESSAGE_DEVICE_NAME:
 				// save the connected device's name
 				mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
-				Toast.makeText(getApplicationContext(),
-						"Connected to " + mConnectedDeviceName,
-						Toast.LENGTH_SHORT).show();
+//				Toast.makeText(getApplicationContext(),
+//						"Connected to " + mConnectedDeviceName,
+//						Toast.LENGTH_SHORT).show();
 				break;
 			case MESSAGE_TOAST:
-				Toast.makeText(getApplicationContext(),
-						msg.getData().getString(TOAST), Toast.LENGTH_SHORT)
-						.show();
+//				Toast.makeText(getApplicationContext(),
+//						msg.getData().getString(TOAST), Toast.LENGTH_SHORT)
+//						.show();
 				break;
 			}
 		}

@@ -14,9 +14,17 @@ public class BrushingActivity extends BTActivity {
     int passedSenconds = 0;
 
 
+    double currentState = 0;
+    
     @Override
     protected void processMessage(String message){
-    	Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+//    	Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    	String[] params = message.split(",");
+    	
+    	int outputState = Integer.parseInt(params[0]);
+    	double frequencyX = Double.parseDouble(params[1]);
+    	double frequencyY = Double.parseDouble(params[2]);
+    	double frequencyZ = Double.parseDouble(params[3]);
     }
 	
 	@Override
