@@ -1,4 +1,4 @@
-package com.klikbruch.sender;
+package com.klikbruch.sender.logic;
 
 public class FFT { 
 	 
