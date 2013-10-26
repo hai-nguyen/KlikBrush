@@ -3,25 +3,41 @@ package com.klikbrush.logic;
 public class BrushState {
 	
 	
-	double frequency;
+	double frequencyX;
+	double frequencyY;
+	double frequencyZ;
 	double strokelength;
 	double circularity;
 	int area;
 	
-	public BrushState(double frequency, double strokelength,
-			double circularity, int area) {
+	public BrushState(double frequencyX, double frequencyY, double frequencyZ,
+			double strokelength, double circularity, int area) {
 		super();
-		this.frequency = frequency;
+		this.frequencyX = frequencyX;
+		this.frequencyY = frequencyY;
+		this.frequencyZ = frequencyZ;
 		this.strokelength = strokelength;
 		this.circularity = circularity;
 		this.area = area;
 	}
-
-	public double getFrequency() {
-		return frequency;
+	
+	public double getFrequencyX() {
+		return frequencyX;
 	}
-	public void setFrequency(double frequency) {
-		this.frequency = frequency;
+	public void setFrequencyX(double frequencyX) {
+		this.frequencyX = frequencyX;
+	}
+	public double getFrequencyY() {
+		return frequencyY;
+	}
+	public void setFrequencyY(double frequencyY) {
+		this.frequencyY = frequencyY;
+	}
+	public double getFrequencyZ() {
+		return frequencyZ;
+	}
+	public void setFrequencyZ(double frequencyZ) {
+		this.frequencyZ = frequencyZ;
 	}
 	public double getStrokelength() {
 		return strokelength;
@@ -42,6 +58,7 @@ public class BrushState {
 		this.area = area;
 	}
 	
+		
 	
 	
 
