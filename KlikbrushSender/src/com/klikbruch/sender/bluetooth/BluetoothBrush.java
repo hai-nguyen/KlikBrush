@@ -324,8 +324,12 @@ public class BluetoothBrush extends Activity {
 		double[] realNumbersX, imagNumbersX;
 		double[] realNumbersY, imagNumbersY;
 		double[] realNumbersZ, imagNumbersZ;
+		
 		long[] timestamps;
 		int count = 0;
+		
+		//computations
+		double[] magnitudeTemp;
 
 		File output = new File(Environment.getExternalStorageDirectory(),
 				"output.csv");
@@ -343,6 +347,8 @@ public class BluetoothBrush extends Activity {
 				realNumbersZ = new double[sampleSize];
 				imagNumbersZ = new double[sampleSize];
 				timestamps = new long[sampleSize];
+				
+				//computation
 			}
 
 			realNumbersX[count] = event.values[0];
@@ -355,15 +361,37 @@ public class BluetoothBrush extends Activity {
 			count++;
 
 			if (count == sampleSize) {
+				
+				double avgX = Util.getAverage(realNumbersX);
+				double avgY = Util.getAverage(realNumbersY);
+				double avgZ = Util.getAverage(realNumbersZ);
+				
+				//default
+				int output_state = 0;
+				
+				if(Math.abs(avgX)>6 && Math.abs(avgY)<4 && Math.abs(avgZ) < 4){
+					//front
+					output_state = 1;
+				}
+				else if(Math.abs(avgX)<4 && Math.abs(avgY)<4 && Math.abs(avgZ) > 6){
+					//top
+					output_state = 2;
+				}
+				
 				new FFT(sampleSize).fft(realNumbersX, imagNumbersX);
 				new FFT(sampleSize).fft(realNumbersY, imagNumbersY);
 				new FFT(sampleSize).fft(realNumbersZ, imagNumbersZ);
+				
+				int maxIndex = Util.computeMaxIndex(realNumbersX, imagNumbersX);
+				double samplingPeriod = ((timestamps[sampleSize-1]- timestamps[0])/1000000000d)/sampleSize;
+				double output_frequency = ((maxIndex/samplingPeriod)/sampleSize);
+				
 				// Util.addDoublesToFiles(realNumbersX, imagNumbersX,
 				// realNumbersY,
 				// imagNumbersY, realNumbersZ, imagNumbersZ, output,
 				// timestamps);
 
-				sendMessage("0,1,2,3");
+				sendMessage(output_state+","+output_frequency+",0,0");
 
 				count = 0;
 			}

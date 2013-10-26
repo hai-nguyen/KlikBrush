@@ -5,10 +5,47 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Util {
-	
+
 	public static final String delim = ";";
+
+	public static double getComplexAbs(double realInput, double imgInput){
+		return Math.abs(Math.sqrt(realInput*realInput)+(imgInput*imgInput));
+	}
 	
-	public static void addDoublesToFiles(double[] realNumbersX, double[] imagNumbersX, double[] realNumbersY, double[] imagNumbersY, double[] realNumbersZ, double[] imagNumbersZ, File output, long[] timestamps) {
+	public static int computeMaxIndex(double[] realNumbers,
+			double[] imagNumbers) {
+		
+		double max = 0;
+		double tmp;
+		int maxIndex = 1;
+		for (int i = 1; i < realNumbers.length/2; i++) {
+			tmp = getComplexAbs(realNumbers[i], imagNumbers[i]);
+			if(tmp>max){
+				max = tmp;
+				maxIndex = i;
+			}
+		}
+		
+		return maxIndex;
+		
+	}
+	
+	public static double getAverage(double[] input) {
+
+		double sum = 0;
+
+		for (double d : input) {
+			sum += d;
+		}
+
+		return sum / input.length;
+
+	}
+
+	public static void addDoublesToFiles(double[] realNumbersX,
+			double[] imagNumbersX, double[] realNumbersY,
+			double[] imagNumbersY, double[] realNumbersZ,
+			double[] imagNumbersZ, File output, long[] timestamps) {
 
 		FileWriter writer = null;
 
@@ -45,7 +82,7 @@ public class Util {
 		}
 
 	}
-	
+
 	
 
 }
