@@ -78,8 +78,6 @@ public class BluetoothBrush extends Activity {
 
 	// Name of the connected device
 	private String mConnectedDeviceName = null;
-	// String buffer for outgoing messages
-	private StringBuffer mOutStringBuffer;
 	// Local Bluetooth adapter
 	private BluetoothAdapter mBluetoothAdapter = null;
 	// Member object for the chat services
@@ -100,19 +98,18 @@ public class BluetoothBrush extends Activity {
 		// R.layout.custom_title);
 
 		mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-		eventListener = new  AccellEventListener();
-		
+		eventListener = new AccellEventListener();
+
 		findViewById(R.id.btn_start).setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				mSensorManager.registerListener(eventListener,
-						mSensorManager
-								.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+				mSensorManager.registerListener(eventListener, mSensorManager
+						.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
 						SensorManager.SENSOR_DELAY_FASTEST);
 			}
 		});
-		
+
 		findViewById(R.id.btn_stop).setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -121,16 +118,7 @@ public class BluetoothBrush extends Activity {
 			}
 		});
 
-
-		// // Set up the custom title
-		// mTitle = (TextView) findViewById(R.id.title_left_text);
-		// mTitle.setText(R.string.app_name);
-		// mTitle = (TextView) findViewById(R.id.title_right_text);
-
-		// Get local Bluetooth adapter
 		mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
-		// If the adapter is null, then Bluetooth is not supported
 		if (mBluetoothAdapter == null) {
 			Toast.makeText(this, "Bluetooth is not available",
 					Toast.LENGTH_LONG).show();
@@ -181,9 +169,6 @@ public class BluetoothBrush extends Activity {
 	private void setupChat() {
 		// Initialize the BluetoothChatService to perform bluetooth connections
 		mChatService = new BluetoothChatService(this, mHandler);
-
-		// Initialize the buffer for outgoing messages
-		mOutStringBuffer = new StringBuffer("");
 	}
 
 	@Override
@@ -213,43 +198,16 @@ public class BluetoothBrush extends Activity {
 	 *            A string of text to send.
 	 */
 	private void sendMessage(String message) {
-		System.out.println("BluetoothBrush.sendMessage()");
-		
-		// Check that we're actually connected before trying anything
+		System.out.println("BluetoothBrush.sendMessage() " + message);
+
 		if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
-			// Toast.makeText(this, R.string.not_connected,
-			// Toast.LENGTH_SHORT).show();
 			return;
 		}
-
-		// Check that there's actually something to send
 		if (message.length() > 0) {
-			// Get the message bytes and tell the BluetoothChatService to write
 			byte[] send = message.getBytes();
 			mChatService.write(send);
-
-			// Reset out string buffer to zero and clear the edit text field
-			mOutStringBuffer.setLength(0);
-			// TODO hier text abgreifen
 		}
 	}
-
-	// The action listener for the EditText widget, to listen for the return key
-	private TextView.OnEditorActionListener mWriteListener = new TextView.OnEditorActionListener() {
-		public boolean onEditorAction(TextView view, int actionId,
-				KeyEvent event) {
-			// If the action is a key-up event on the return key, send the
-			// message
-			if (actionId == EditorInfo.IME_NULL
-					&& event.getAction() == KeyEvent.ACTION_UP) {
-				String message = view.getText().toString();
-				sendMessage(message);
-			}
-			if (D)
-				Log.i(TAG, "END onEditorAction");
-			return true;
-		}
-	};
 
 	// The Handler that gets information back from the BluetoothChatService
 	private final Handler mHandler = new Handler() {
@@ -266,26 +224,22 @@ public class BluetoothBrush extends Activity {
 							R.string.title_connected_to + " "
 									+ mConnectedDeviceName, Toast.LENGTH_SHORT)
 							.show();
-					// mTitle.setText(R.string.title_connected_to);
-					// mTitle.append(mConnectedDeviceName);
 					break;
 				case BluetoothChatService.STATE_CONNECTING:
-					// mTitle.setText(R.string.title_connecting);
 					break;
 				case BluetoothChatService.STATE_LISTEN:
 				case BluetoothChatService.STATE_NONE:
 					Toast.makeText(getApplicationContext(),
 							R.string.title_not_connected, Toast.LENGTH_SHORT)
 							.show();
-					// mTitle.setText(R.string.title_not_connected);
 					break;
 				}
 				break;
 			case MESSAGE_WRITE:
-				// we have sent a message!
-				byte[] writeBuf = (byte[]) msg.obj;
-				// construct a string from the buffer
-				String writeMessage = new String(writeBuf);
+//				// we have sent a message!
+//				byte[] writeBuf = (byte[]) msg.obj;
+//				// construct a string from the buffer
+//				String writeMessage = new String(writeBuf);
 				break;
 			case MESSAGE_READ:
 				// a message has arrived!
@@ -380,8 +334,6 @@ public class BluetoothBrush extends Activity {
 
 		@Override
 		public void onSensorChanged(SensorEvent event) {
-
-			// if (System.currentTimeMillis() - lastUpdate > 50) {
 
 			if (count == 0) {
 				realNumbersX = new double[sampleSize];
