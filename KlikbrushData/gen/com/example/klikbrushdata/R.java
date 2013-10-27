@@ -46,20 +46,19 @@ public final class R {
         public static final int home_avatar=0x7f020000;
         public static final int home_bg=0x7f020001;
         public static final int home_play=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int main_circularity_left=0x7f020004;
-        public static final int main_circularity_right=0x7f020005;
-        public static final int main_speed_rabbit_right=0x7f020006;
-        public static final int main_speed_turtle_left=0x7f020007;
-        public static final int main_stroke_left=0x7f020008;
-        public static final int main_stroke_right=0x7f020009;
-        public static final int main_teeth_front=0x7f02000a;
-        public static final int main_teeth_top=0x7f02000b;
-        public static final int progess_drawable_blue=0x7f02000c;
-        public static final int seekbar_drwable_green=0x7f02000d;
-        public static final int seekbar_drwable_purple=0x7f02000e;
+        public static final int home_settings=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int main_circularity_left=0x7f020005;
+        public static final int main_circularity_right=0x7f020006;
+        public static final int main_speed_rabbit_right=0x7f020007;
+        public static final int main_speed_turtle_left=0x7f020008;
+        public static final int main_stroke_left=0x7f020009;
+        public static final int main_stroke_right=0x7f02000a;
+        public static final int main_teeth_front=0x7f02000b;
+        public static final int main_teeth_top=0x7f02000c;
+        public static final int progess_drawable_blue=0x7f02000d;
+        public static final int seekbar_drwable_green=0x7f02000e;
         public static final int seekbar_thumb=0x7f02000f;
-        public static final int seekbar_thumb_purple=0x7f020010;
     }
     public static final class id {
         public static final int action_settings=0x7f090012;
