@@ -229,7 +229,7 @@ public class BluetoothChatService {
      */
     private class AcceptThread extends Thread {
         // The local server socket
-        private final BluetoothServerSocket mmServerSocket;
+        private BluetoothServerSocket mmServerSocket;
 
         public AcceptThread() {
             BluetoothServerSocket tmp = null;
@@ -254,7 +254,7 @@ public class BluetoothChatService {
                     // This is a blocking call and will only return on a
                     // successful connection or an exception
                     socket = mmServerSocket.accept();
-                } catch (IOException e) {
+                } catch (Exception e) {
                     Log.e(TAG, "accept() failed", e);
                     break;
                 }

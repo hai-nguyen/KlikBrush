@@ -11,7 +11,7 @@
         android:id="@+id/action_box"
         android:orderInCategory="100"
         android:showAsAction="always"
-        android:icon="@drawable/ic_launcher"
-        android:title="Refresh"/>
+        android:icon="@drawable/share_icon"
+        android:title="Share with Box"/>
 
 </menu>

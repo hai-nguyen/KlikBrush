@@ -1,5 +1,6 @@
 package com.klikbrush.ui;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -72,6 +73,7 @@ public class BrushingActivity extends BTActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_brushing);
+		
 
 		initUI(); // get all views
 
