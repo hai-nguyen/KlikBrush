@@ -8,28 +8,36 @@ public class Util {
 
 	public static final String delim = ";";
 
-	public static double getComplexAbs(double realInput, double imgInput){
-		return Math.abs(Math.sqrt(realInput*realInput)+(imgInput*imgInput));
+	public static double getComplexAbs(double realInput, double imgInput) {
+		return Math.abs(Math.sqrt(realInput * realInput)
+				+ (imgInput * imgInput));
 	}
-	
-	public static int computeMaxIndex(double[] realNumbers,
-			double[] imagNumbers) {
-		
+
+	public static int computeMaxIndex(double[] realNumbers, double[] imagNumbers) {
+
 		double max = 0;
 		double tmp;
 		int maxIndex = 1;
-		for (int i = 1; i < realNumbers.length/2; i++) {
+		for (int i = 1; i < realNumbers.length / 2; i++) {
 			tmp = getComplexAbs(realNumbers[i], imagNumbers[i]);
-			if(tmp>max){
+			if (tmp > max) {
 				max = tmp;
 				maxIndex = i;
 			}
 		}
-		
+
 		return maxIndex;
-		
+
 	}
-	
+
+	public static double getFrequency(double[] realNumbers, double[] imagNumbers,
+			long[] timestamps, int sampleSize) {
+		int maxIndex = Util.computeMaxIndex(realNumbers, imagNumbers);
+		double samplingPeriod = ((timestamps[sampleSize - 1] - timestamps[0]) / 1000000000d)
+				/ sampleSize;
+		return ((maxIndex / samplingPeriod) / sampleSize);
+	}
+
 	public static double getAverage(double[] input) {
 
 		double sum = 0;
@@ -82,7 +90,5 @@ public class Util {
 		}
 
 	}
-
-	
 
 }

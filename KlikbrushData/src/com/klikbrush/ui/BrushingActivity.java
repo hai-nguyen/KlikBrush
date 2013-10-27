@@ -1,20 +1,31 @@
 package com.klikbrush.ui;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 import com.example.klikbrushdata.R;
 
-public class BrushingActivity extends FragmentActivity {
+public class BrushingActivity extends BTActivity {
 	
 	TextView txtCounter, txtFrequency, txtStroke;
 	ProgressBar prgPhase;
     int passedSenconds = 0;
 
 
+    double currentState = 0;
+    
+    @Override
+    protected void processMessage(String message){
+//    	Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    	String[] params = message.split(",");
+    	
+    	int outputState = Integer.parseInt(params[0]);
+    	double frequencyX = Double.parseDouble(params[1]);
+    	double frequencyY = Double.parseDouble(params[2]);
+    	double frequencyZ = Double.parseDouble(params[3]);
+    }
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
