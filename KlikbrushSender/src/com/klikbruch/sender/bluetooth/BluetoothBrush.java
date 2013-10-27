@@ -363,32 +363,44 @@ public class BluetoothBrush extends Activity {
 				double avgZ = Util.getAverage(realNumbersZ);
 				
 				//default
-				int output_state = 0;
+				int output_State = 0;
 				
 				if(Math.abs(avgX)>6 && Math.abs(avgY)<4 && Math.abs(avgZ) < 4){
 					//front
-					output_state = 1;
+					output_State = 1;
 				}
 				else if(Math.abs(avgX)<4 && Math.abs(avgY)<4 && Math.abs(avgZ) > 6){
 					//top
-					output_state = 2;
+					output_State = 2;
 				}
 				
 				new FFT(sampleSize).fft(realNumbersX, imagNumbersX);
 				new FFT(sampleSize).fft(realNumbersY, imagNumbersY);
 				new FFT(sampleSize).fft(realNumbersZ, imagNumbersZ);
 				
-				double output_frequency_x = Util.getFrequency(realNumbersX, imagNumbersX, timestamps, sampleSize);
-				double output_frequency_y = Util.getFrequency(realNumbersY, imagNumbersY, timestamps, sampleSize);
-				double output_frequency_z = Util.getFrequency(realNumbersZ, imagNumbersZ, timestamps, sampleSize);
+				double output_FrequencyX = Util.getFrequency(realNumbersX, imagNumbersX, timestamps, sampleSize);
+				double output_FrequencyY = Util.getFrequency(realNumbersY, imagNumbersY, timestamps, sampleSize);
+				double output_FrequencyZ = Util.getFrequency(realNumbersZ, imagNumbersZ, timestamps, sampleSize);
+				
+				double magnitudeX = Math.abs(realNumbersX[Util.computeMaxIndex(realNumbersX, imagNumbersX)]);
+				double magnitudeY = Math.abs(realNumbersY[Util.computeMaxIndex(realNumbersY, imagNumbersY)]);
+				double magnitudeZ = Math.abs(realNumbersZ[Util.computeMaxIndex(realNumbersZ, imagNumbersZ)]);
 				
 				// Util.addDoublesToFiles(realNumbersX, imagNumbersX,
 				// realNumbersY,
 				// imagNumbersY, realNumbersZ, imagNumbersZ, output,
 				// timestamps);
+				
+				double circleXY = magnitudeX/magnitudeY;
+				double circleYZ = magnitudeY/magnitudeZ;
+				double circleZX = magnitudeZ/magnitudeX;
+				
+				String output="";
+				output+=output_State+","+output_FrequencyX+","+output_FrequencyY+","+output_FrequencyZ;
+				output+=","+magnitudeX+","+magnitudeY+","+magnitudeZ;
+				output+=","+circleXY+","+circleYZ+","+circleZX;
 
-				sendMessage(output_state+","+output_frequency_x+","+output_frequency_y+","+output_frequency_z);
-
+				sendMessage(output);
 				count = 0;
 			}
 		}

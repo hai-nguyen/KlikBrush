@@ -27,11 +27,10 @@ public class Util {
 		}
 
 		return maxIndex;
-
 	}
 
-	public static double getFrequency(double[] realNumbers, double[] imagNumbers,
-			long[] timestamps, int sampleSize) {
+	public static double getFrequency(double[] realNumbers,
+			double[] imagNumbers, long[] timestamps, int sampleSize) {
 		int maxIndex = Util.computeMaxIndex(realNumbers, imagNumbers);
 		double samplingPeriod = ((timestamps[sampleSize - 1] - timestamps[0]) / 1000000000d)
 				/ sampleSize;
