@@ -32,6 +32,8 @@
             android:src="@drawable/main_teeth_front"/>
  
 
+
+ 	
     <RelativeLayout
         android:id="@+id/ll_stats"
         android:layout_width="fill_parent"
