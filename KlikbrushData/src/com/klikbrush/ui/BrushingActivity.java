@@ -2,9 +2,12 @@ package com.klikbrush.ui;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.klikbrushdata.R;
 
@@ -13,14 +16,17 @@ public class BrushingActivity extends BTActivity {
 	TextView txtCounter;
 	ProgressBar prgPhase;
 	int passedSenconds = 0;
-	ImageView txtFrequency, txtStroke;
+	ImageView txtFrequency, txtStroke, img_toothPhase;
+	SeekBar sbFrequency;
 
 	double currentState = 0;
 
 	@Override
 	protected void processMessage(String message) {
-		// Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+		//Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+
 		String[] params = message.split(",");
+
 
 		int outputState = Integer.parseInt(params[0]);
 		double frequencyX = Double.parseDouble(params[1]);
@@ -37,16 +43,21 @@ public class BrushingActivity extends BTActivity {
 		double circleYZ = Double.parseDouble(params[8]);
 		double circleZX = Double.parseDouble(params[9]);
 		
+		
+		Log.i("info", "frequencyX " + frequencyX);
+		Log.i("info", "frequencyY " + frequencyY);
+		Log.i("info", "frequencyZ " + frequencyZ);
 		if(outputState==1){
-			((ImageView) findViewById(R.id.iv_teeth)).setBackgroundResource(R.drawable.main_teeth_front);
+			img_toothPhase.setBackgroundResource(R.drawable.main_teeth_front);
+			sbFrequency.setProgress((int) frequencyX);
 		}
 		else if(outputState==2){
-			((ImageView) findViewById(R.id.iv_teeth)).setBackgroundResource(R.drawable.main_teeth_front);
-		}
-		else {
-			((ImageView) findViewById(R.id.iv_teeth)).setBackgroundDrawable(null);
+			img_toothPhase.setBackgroundResource(R.drawable.main_teeth_top);
+			sbFrequency.setProgress((int) frequencyZ);
+
 		}
 		
+		img_toothPhase.refreshDrawableState();
 	}
 
 	@Override
@@ -89,6 +100,10 @@ public class BrushingActivity extends BTActivity {
 		prgPhase = (ProgressBar) findViewById(R.id.progress_phase);
 		prgPhase.setMax(30);
 		prgPhase.setProgress(0);
+		
+		img_toothPhase = (ImageView) findViewById(R.id.img_toothPhase);
+		sbFrequency = (SeekBar) findViewById(R.id.slider);
+
 
 	}
 
