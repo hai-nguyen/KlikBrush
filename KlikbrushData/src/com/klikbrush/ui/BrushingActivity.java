@@ -25,10 +25,12 @@ public class BrushingActivity extends BTActivity {
 		double frequencyX = Double.parseDouble(params[1]);
 		double frequencyY = Double.parseDouble(params[2]);
 		double frequencyZ = Double.parseDouble(params[3]);
+		//0-10
 
 		double magnitudeX = Double.parseDouble(params[4]);
 		double magnitudeY = Double.parseDouble(params[5]);
 		double magnitudeZ = Double.parseDouble(params[6]);
+		//0-1000
 		
 		double circleXY = Double.parseDouble(params[7]);
 		double circleYZ = Double.parseDouble(params[8]);

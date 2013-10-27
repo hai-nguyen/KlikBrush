@@ -399,7 +399,7 @@ public class BluetoothBrush extends Activity {
 				output+=output_State+","+output_FrequencyX+","+output_FrequencyY+","+output_FrequencyZ;
 				output+=","+magnitudeX+","+magnitudeY+","+magnitudeZ;
 				output+=","+circleXY+","+circleYZ+","+circleZX;
-
+				
 				sendMessage(output);
 				count = 0;
 			}
