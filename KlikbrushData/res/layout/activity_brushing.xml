@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:padding="30dp"
+        android:paddingTop="10dp"
         android:text="00:00"
         android:textSize="40dp" />
 
@@ -65,15 +65,16 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingBottom="20dp">
+        android:layout_below="@+id/ll_stats"
+        android:paddingTop="10dp">
         
-    <TextView
+    <ImageView
             android:id="@+id/txt_frequency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="Bild1"/>
-        
+            android:src="@drawable/main_speed_turtle_left"/>   
+                 
 	<SeekBar
 	    android:id="@+id/slider"
 	    android:layout_width="wrap_content"
@@ -81,14 +82,16 @@
 	    android:layout_toLeftOf="@+id/txt_strokelength"
 	    android:layout_toRightOf="@id/txt_frequency"
 	    android:max="100"
-	    android:progress="0" />
+	    android:progress="50"
+	    android:progressDrawable="@drawable/seekbar_drwable_green"
+	    android:thumb="@drawable/seekbar_thumb" />
 
-        <TextView
+        <ImageView
             android:id="@+id/txt_strokelength"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="Bild2"/>
+            android:src="@drawable/main_speed_rabbit_right"/>
         
     </RelativeLayout>
 
