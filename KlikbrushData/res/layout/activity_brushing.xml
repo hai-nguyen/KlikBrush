@@ -55,7 +55,9 @@
 	    android:layout_toLeftOf="@+id/txt_strokelength"
 	    android:layout_toRightOf="@id/txt_frequency"
 	    android:max="1000"
-	    android:progress="500"/>
+	    android:progress="500"
+	    android:progressDrawable="@drawable/seekbar_drwable_green"
+	    android:thumb="@drawable/seekbar_thumb"/>
 
         <ImageView
             android:id="@+id/txt_strokelength"
@@ -88,7 +90,9 @@
     		    android:layout_toRightOf="@id/img_strokeMin"
     		    android:max="100"
     		    android:minWidth="50dp"
-    		    android:progress="50" />
+    		    android:progress="50"
+    		    android:progressDrawable="@drawable/seekbar_drwable_purple"
+    		    android:thumb="@drawable/seekbar_thumb" />
             
     <ImageView
             android:id="@+id/img_strokeMax"
@@ -122,7 +126,9 @@
 	    android:layout_toLeftOf="@+id/txt_circleMax"
 	    android:layout_toRightOf="@+id/txt_circleMin"
 	    android:max="100"
-	    android:progress="50" />
+	    android:progress="50"
+	    android:progressDrawable="@drawable/seekbar_drwable_red"
+	    android:thumb="@drawable/seekbar_thumb" />
 
         <ImageView
             android:id="@+id/txt_circleMax"
