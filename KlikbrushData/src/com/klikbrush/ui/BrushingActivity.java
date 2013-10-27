@@ -1,5 +1,6 @@
 package com.klikbrush.ui;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -76,7 +77,10 @@ public class BrushingActivity extends BTActivity {
 	}
 
 	private void initUI() {
+		Typeface tf = Typeface.createFromAsset(getAssets(),
+		        "fonts/lato.ttf");
 		txtCounter = (TextView) findViewById(R.id.txt_counter);
+		txtCounter.setTypeface(tf);
 		txtFrequency = (TextView) findViewById(R.id.txt_frequency);
 		txtStroke = (TextView) findViewById(R.id.txt_strokelength);
 		prgPhase = (ProgressBar) findViewById(R.id.progress_phase);
