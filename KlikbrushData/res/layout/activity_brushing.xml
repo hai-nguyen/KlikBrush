@@ -49,7 +49,7 @@
 <!--      </LinearLayout> -->
     
 
-    <fragment
+<!--     <fragment
         android:id="@+id/fragment_teeth"
         android:name="com.klikbrush.ui.TeethFragment"
         android:layout_width="fill_parent"
@@ -57,7 +57,17 @@
         android:layout_below="@id/progress_phase"
         android:layout_above="@+id/ll_stats" >
     </fragment>
-
+ -->
+ 	
+ 	 <ImageView
+        android:id="@+id/iv_teeth"
+        android:name="com.klikbrush.ui.TeethFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/progress_phase"
+        android:layout_above="@+id/ll_stats" >
+    </ImageView>
+ 
     <RelativeLayout
         android:id="@id/ll_stats"
         android:layout_width="fill_parent"

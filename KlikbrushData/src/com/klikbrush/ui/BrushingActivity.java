@@ -1,9 +1,9 @@
 package com.klikbrush.ui;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.klikbrushdata.R;
 
@@ -32,6 +32,17 @@ public class BrushingActivity extends BTActivity {
 		double circleXY = Double.parseDouble(params[7]);
 		double circleYZ = Double.parseDouble(params[8]);
 		double circleZX = Double.parseDouble(params[9]);
+		
+		if(outputState==1){
+			((ImageView) findViewById(R.id.iv_teeth)).setBackgroundResource(R.drawable.main_teeth_front);
+		}
+		else if(outputState==2){
+			((ImageView) findViewById(R.id.iv_teeth)).setBackgroundResource(R.drawable.main_teeth_front);
+		}
+		else {
+			((ImageView) findViewById(R.id.iv_teeth)).setBackgroundDrawable(null);
+		}
+		
 	}
 
 	@Override
