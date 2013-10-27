@@ -17,7 +17,7 @@ public class BrushingActivity extends BTActivity {
 	ProgressBar prgPhase;
 	int passedSenconds = 0;
 	ImageView txtFrequency, txtStroke, img_toothPhase;
-	SeekBar sbFrequency;
+	SeekBar sbFrequency, sbMagnitude, sbCircle;
 
 	double currentState = 0;
 
@@ -49,15 +49,19 @@ public class BrushingActivity extends BTActivity {
 		Log.i("info", "frequencyZ " + frequencyZ);
 		if(outputState==1){
 			img_toothPhase.setBackgroundResource(R.drawable.main_teeth_front);
-			sbFrequency.setProgress((int) frequencyX);
+			sbFrequency.setProgress((int) frequencyX * 10);
+			sbMagnitude.setProgress((int) magnitudeX);
+			sbCircle.setProgress((int) circleXY * 10);
 		}
 		else if(outputState==2){
 			img_toothPhase.setBackgroundResource(R.drawable.main_teeth_top);
-			sbFrequency.setProgress((int) frequencyZ);
+			sbFrequency.setProgress((int) frequencyZ*10);
+			sbMagnitude.setProgress((int) magnitudeZ);
+			sbCircle.setProgress((int) circleYZ*10);
 
 		}
 		
-		img_toothPhase.refreshDrawableState();
+		//img_toothPhase.refreshDrawableState();
 	}
 
 	@Override
@@ -103,7 +107,8 @@ public class BrushingActivity extends BTActivity {
 		
 		img_toothPhase = (ImageView) findViewById(R.id.img_toothPhase);
 		sbFrequency = (SeekBar) findViewById(R.id.slider);
-
+		sbMagnitude = (SeekBar) findViewById(R.id.slider2);
+		sbCircle = (SeekBar) findViewById(R.id.slider3);
 
 	}
 

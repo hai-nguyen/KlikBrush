@@ -29,7 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/progress_phase"
-            android:background="@android:color/holo_red_dark"/>
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
  
 
 
@@ -55,8 +56,8 @@
 	    android:layout_height="wrap_content"
 	    android:layout_toLeftOf="@+id/txt_strokelength"
 	    android:layout_toRightOf="@id/txt_frequency"
-	    android:max="1000"
-	    android:progress="500"
+	    android:max="100"
+	    android:progress="50"
 	    android:progressDrawable="@drawable/seekbar_drwable_green"
 	    android:thumb="@drawable/seekbar_thumb"
 	    android:layout_centerInParent="true" />
@@ -92,8 +93,8 @@
     		    android:layout_height="wrap_content"
     		    android:layout_toLeftOf="@+id/img_strokeMax"
     		    android:layout_toRightOf="@id/img_strokeMin"
-    		    android:max="100"
-    		    android:progress="50"
+    		    android:max="1000"
+    		    android:progress="500"
     		    android:progressDrawable="@drawable/seekbar_drwable_purple"
     		    android:thumb="@drawable/seekbar_thumb"
     		    android:layout_centerInParent="true" />
@@ -131,8 +132,8 @@
 	    android:layout_height="wrap_content"
 	    android:layout_toLeftOf="@+id/txt_circleMax"
 	    android:layout_toRightOf="@+id/txt_circleMin"
-	    android:max="100"
-	    android:progress="50"
+	    android:max="20"
+	    android:progress="10"
 	    android:progressDrawable="@drawable/seekbar_drwable_red"
 	    android:thumb="@drawable/seekbar_thumb"
 	    android:layout_centerInParent="true" />

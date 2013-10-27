@@ -9,15 +9,16 @@
     <ImageView
         android:layout_width="179dp"
         android:layout_height="180dp"
-        android:src="@drawable/home_avatar">
-        </ImageView>
+        android:paddingBottom="20dp"
+        android:src="@drawable/home_avatar" />
 
     <ImageButton
         android:id="@+id/btn_start"
         android:layout_width="104dp"
         android:layout_height="120dp"
         android:background="@drawable/home_play"
-        android:paddingTop="30dp" />
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp" />
     
         <ImageView
         android:layout_width="wrap_content"
