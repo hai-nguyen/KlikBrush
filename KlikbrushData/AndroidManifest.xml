@@ -21,16 +21,21 @@
             android:name="com.klikbrush.ui.StartActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
-            <intent-filter>
+           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> >
         </activity>
         <activity
             android:name="com.klikbrush.ui.BrushingActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
+        </activity>
+            <activity
+            android:name="com.klikbrush.ui.ResultActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+             
         </activity>
     </application>
 
