@@ -5,11 +5,10 @@ Android Application hacked at Hackathon Europe 2013 - TechCrunch Hackathon
 
 Details
 =======
-KlikbrushData -> This app captures motion data on tooth brush and sends it
-to client via bluetooth
+KlikbrushData -> Runs on the tooth brush and sends motion data to client via bluetooth
 
 KlinkbrushSender -> Client, which receives data from KlikbrushData via 
-bluetooth and visualise them
+bluetooth and visualise it
 
 
 Screenshots
