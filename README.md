@@ -5,19 +5,14 @@ Android Application hacked at Hackathon Europe 2013 - TechCrunch Hackathon
 
 Details
 =======
-KlikbrushData -> Runs on the tooth brush and sends motion data to client via bluetooth
+Building hassle free health habits for the busy family.
 
-KlinkbrushSender -> Client, which receives data from KlikbrushData via 
-bluetooth and visualise it
-
+Millions of people have oral health problems, which prohibits them from playing, learning and enjoying life. We help remind, review and reward you and your children's brushing habits with Klikbrush, the world's first smart toothbrush attachable. TechCrunch DEMO: http://studio.stupeflix.com/v/Z0Jv5ZTmwu/?autoplay=1
 
 Screenshots
 ===========
 
-![Home](https://dl.dropboxusercontent.com/u/3672489/KlikBrush/home_overview.png)
+![Home](https://dl.dropboxusercontent.com/u/3672489/KlikBrush/klik.png)
 
-![Main](https://dl.dropboxusercontent.com/u/3672489/KlikBrush/main_overview.png)
-
-![Rewards](https://dl.dropboxusercontent.com/u/3672489/KlikBrush/rewards_overview.png)
 
 
